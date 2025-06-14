@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA"
+    android:padding="24dp"
+    tools:context=".UpdateActivity">
+
+    <!-- Nút quay lại -->
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:tint="#FF6F61"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/updatech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CẬP NHẬT CÂU HỎI"
+        android:textColor="#FF6F61"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back" />
+
+    <!-- ID (Disabled) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/updatech">
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="ID"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Câu hỏi -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cardId">
+
+        <EditText
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Câu hỏi"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Đáp án đúng -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cardQuestion">
+
+        <EditText
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Đáp án đúng"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Các đáp án -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardChoiceA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cardAnswer">
+
+        <EditText
+            android:id="@+id/ca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="A:"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardChoiceB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cardChoiceA">
+
+        <EditText
+            android:id="@+id/cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="B:"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardChoiceC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cardChoiceB">
+
+        <EditText
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="C:"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardChoiceD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cardChoiceC">
+
+        <EditText
+            android:id="@+id/cd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="D:"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Nhóm nút chức năng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/cardChoiceD">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFCA28"
+            android:text="CẬP NHẬT"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"/>
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF6F61"
+            android:text="XÓA"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Bục đồng (vị trí 3) -->
+    <path
+        android:fillColor="#CD7F32"
+        android:pathData="M8,28 L8,16 L16,16 L16,28z" />
+
+    <!-- Bục bạc (vị trí 2) -->
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M18,24 L18,12 L26,12 L26,24z" />
+
+    <!-- Bục vàng (vị trí 1) -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M28,20 L28,8 L36,8 L36,20z" />
+
+    <!-- Số 1 (trên bục vàng) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,6 L32,8 L33,8 L33,6z M31,5 L31,9 L34,9 L34,5z" />
+
+    <!-- Số 2 (trên bục bạc) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,10 L22,12 L23,12 L23,10z M21,9 L21,13 L24,13 L24,9z" />
+
+    <!-- Số 3 (trên bục đồng) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,14 L12,16 L13,16 L13,14z M11,13 L11,17 L14,17 L14,13z" />
+
+</vector>
